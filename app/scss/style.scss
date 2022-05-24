@@ -97,7 +97,8 @@
 
     &:hover {
       border: none;
-      padding: 12px 27px;;
+      padding: 12px 27px;
+      ;
     }
   }
 }
@@ -106,13 +107,15 @@
 // product-benefits start 
 
 .product-benefits {
+  margin-bottom: 70px;
+
   .product-benefits__title {
     text-align: center;
     font-size: 25px;
     font-weight: 700;
     @include f700;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   .product-benefits__slider-wrapper {
@@ -125,23 +128,259 @@
     background-size: cover;
     background-position: center;
     color: #fff;
-    min-height: 400px;
-    padding: 30px;
+    min-height: 500px;
 
   }
 
-  .product-benefits__slider-1 {
+  .product-benefits__slider-wrapper {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 10px;
+      left: 14%;
+      border-top: 10px solid $orange;
+      border-left: 10px solid $orange;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      bottom: 10px;
+      right: 16%;
+      border-bottom: 10px solid $orange;
+      border-right: 10px solid $orange;
+      z-index: 1;
+    }
+  }
+
+  .product-benefits__slider-itembox {
     font-size: 34px;
-    display: flex!important;
+    @include f500;
+    min-height: 500px;
+    height: 100%;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    @include f500;
+    padding: 55px;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
 
     span {
       font-size: 21px;
       @include f400;
+      text-transform: lowercase;
+    }
+
+    .slider-itembox__list {
+      li+li {
+        margin-top: 5px;
+      }
+    }
+
+
+  }
+}
+
+.custom_arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: inherit;
+}
+
+.custom_arrow-next {
+  border: none;
+  cursor: pointer;
+  background-image: url('../images/slider_arrow.svg');
+  transform: rotate(90deg);
+  width: 40px;
+  height: 40px;
+  right: 15%;
+}
+
+.custom_arrow-prev {
+  border: none;
+  cursor: pointer;
+  background-image: url('../images/slider_arrow.svg');
+  transform: rotate(-90deg);
+  width: 40px;
+  height: 40px;
+  left: 13%;
+}
+
+.slick-dots {
+  position: absolute;
+  display: flex;
+  bottom: 7px;
+  width: 100%;
+  justify-content: center;
+
+
+
+  li {
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 0;
+      background-color: #fff;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+
+    &+li {
+      margin-left: 4px;
+    }
+  }
+
+  li.slick-active {
+    button {
+      background-color: $orange;
     }
   }
 }
 
 // product-benefits end 
+// start technologies 
+
+.technologies {
+  margin-bottom: 70px;
+}
+
+.technologies__title {
+  text-align: center;
+  margin-bottom: 50px;
+  @include f700;
+  font-size: 40px;
+  text-transform: uppercase;
+
+  span {
+    color: $orange;
+  }
+}
+
+.technologies__inner-desc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  .inner-desc__image {
+    width: 10%;
+  }
+
+  .inner-desc__text {
+    @include f500;
+    font-size: 20px;
+    padding: 10px;
+    width: 75%;
+  }
+}
+
+
+
+.technologies__inner-blocks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.technologies__inner-block {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.technologies__inner-blockpict {
+  background-image: url('../images/long-arrowsvg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include f700;
+  font-size: 35px;
+}
+
+.technologies__inner-blocktext {
+  padding: 9%;
+  font-size: 22px;
+  @include f400;
+   span {
+     @include f700;
+   }
+}
+
+
+
+
+// end technologies 
+// start ultraviolet 
+
+
+.ultraviolet {
+  background-color: #f2f2f2;
+  .ultraviolet__title {
+    width: 100%;
+    text-align: center;
+    @include f700;
+    font-size: 45px;
+    text-transform: uppercase;
+    padding: 50px 10px;
+  }
+
+  .ultraviolet__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ultraviolet__inner-item {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .ultraviolet__inner-itempict {
+    width: 20%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .ultraviolet__inner-text {
+    width: 75%;
+    padding: 0 30px 0 10px;
+    @include f500;
+  }
+}
+
+.ultraviolet__link-box {
+  text-align: center;
+
+  .ultraviolet__link {
+    color: #000;
+    opacity: 0.7;
+    text-transform: lowercase;
+
+    &:hover {
+      opacity: 1;
+      color: $orange;
+    }
+  }
+}
+
+// end ultraviolet 
