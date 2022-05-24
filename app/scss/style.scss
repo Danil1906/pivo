@@ -1,0 +1,147 @@
+@import 'global';
+@import 'vars';
+@import 'fonts';
+
+// start header 
+.header {
+  min-height: 100vh;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .header__logo {
+    position: relative;
+    padding: 15px 0;
+
+    a {
+
+      img {
+        width: 110px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      background-color: #fff;
+      width: 90%;
+      margin: 0 5%;
+      bottom: 0;
+    }
+  }
+}
+
+.header__welcome-text {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 160px;
+  padding-bottom: 85px;
+}
+
+.welcome-text__title {
+  font-size: 50px;
+  width: 81%;
+  @include f700
+}
+
+.welcome-text__desc {
+  margin-top: 20px;
+  font-size: 15px;
+  @include f500
+}
+
+// end header 
+// start any-questions 
+
+.any-questions {
+  height: 51vh;
+  background-color: $orange;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+
+  .any-questions__wrapper {
+    min-width: 60vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .any-questions__text {
+    color: #fff;
+    font-size: 33px;
+    font-weight: 100;
+    max-width: 60%;
+    @include f400;
+
+    span {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      @include f100;
+    }
+  }
+
+  .any-questions__btn {
+    border: 2px solid black;
+    padding: 12px 25px;
+    font-size: 23px;
+    cursor: pointer;
+
+    &:hover {
+      border: none;
+      padding: 12px 27px;;
+    }
+  }
+}
+
+// end any-questions 
+// product-benefits start 
+
+.product-benefits {
+  .product-benefits__title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    @include f700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  .product-benefits__slider-wrapper {
+    width: 100%;
+  }
+
+  .product-benefits__slider-item {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 400px;
+    padding: 30px;
+
+  }
+
+  .product-benefits__slider-1 {
+    font-size: 34px;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: space-between;
+    @include f500;
+
+    span {
+      font-size: 21px;
+      @include f400;
+    }
+  }
+}
+
+// product-benefits end 
