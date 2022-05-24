@@ -4,7 +4,7 @@
 
 // start header 
 .header {
-  min-height: 100vh;
+  min-height: 80vh;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +59,7 @@
 // start any-questions 
 
 .any-questions {
-  height: 51vh;
+  height: 20vh;
   background-color: $orange;
   display: flex;
   align-items: center;
@@ -272,6 +272,7 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 30px;
+
   .inner-desc__image {
     width: 10%;
   }
@@ -317,9 +318,10 @@
   padding: 9%;
   font-size: 22px;
   @include f400;
-   span {
-     @include f700;
-   }
+
+  span {
+    @include f700;
+  }
 }
 
 
@@ -331,6 +333,7 @@
 
 .ultraviolet {
   background-color: #f2f2f2;
+
   .ultraviolet__title {
     width: 100%;
     text-align: center;
@@ -338,6 +341,10 @@
     font-size: 45px;
     text-transform: uppercase;
     padding: 50px 10px;
+
+    span {
+      color: $orange;
+    }
   }
 
   .ultraviolet__inner {
@@ -370,11 +377,18 @@
 
 .ultraviolet__link-box {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+
 
   .ultraviolet__link {
+    margin-bottom: 70px;
     color: #000;
     opacity: 0.7;
     text-transform: lowercase;
+    width: 25%;
+    text-align: center;
 
     &:hover {
       opacity: 1;
@@ -384,3 +398,124 @@
 }
 
 // end ultraviolet 
+// start production 
+.production {
+  margin-bottom: 70px;
+}
+
+.production__title {
+  margin: 55px 0;
+  text-align: center;
+  @include f700;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.production__pict-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.production__pict-item {
+  width: 30%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 40px;
+
+}
+
+.production__vider-rwapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 94px;
+    width: 50px;
+    height: 50px;
+    background-color: $orange;
+    background-image: url('../images/play.svg');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+
+// end production
+// start footer 
+.footer {
+  min-height: 220px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.footer__title {
+  text-align: center;
+  font-size: 35px;
+  @include f700;
+  text-transform: uppercase;
+  margin: 35px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.footer__item {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__image {
+  width: 20%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer__text {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.footer-item__title {
+  color: $orange;
+  @include f500;
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 15%;
+}
+
+.footer-address__image {
+  width: 50%;
+}
+
+.footer_legal-information {
+  text-align: center;
+  color: #fff;
+  @include f400;
+  opacity: 0.4;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+// end footer 

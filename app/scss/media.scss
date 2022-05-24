@@ -1,0 +1,32 @@
+@media (max-width: 709px) {
+    .welcome-text__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 526px) {
+    .any-questions .any-questions__wrapper {
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    
+    .any-questions .any-questions__text {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .any-questions .any-questions__btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .any-questions {
+        height: 40vh;
+    }
+    
+    .header {
+        height: 65vh;
+    }
+}
